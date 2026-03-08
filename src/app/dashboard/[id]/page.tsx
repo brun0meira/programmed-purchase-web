@@ -81,7 +81,7 @@ export default function DashboardPage() {
             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/Clientes/${clienteId}/valor-mensal`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ novoValor: parseFloat(novoValorAporte) })
+                body: JSON.stringify({ novoValorMensal: parseFloat(novoValorAporte) })
             });
             if (!response.ok) throw new Error('Erro ao alterar valor.');
             setMensagemSucesso('Valor mensal atualizado com sucesso!');
